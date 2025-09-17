@@ -1,7 +1,7 @@
-# 🫧 Electronic Nose — Gas Sensor ML (Hybrid)
+# Electronic Nose (Gas Sensor) ML
 
 This repository implements **machine learning for gas sensor time-series** (SnO₂-based MOS sensors) to predict **dangerous gas concentrations** (Hydrogen, Propane).  
-It ships a **small demo dataset** (lite) to keep repo size low, **but** contains the **full codebase** (ensembles, CV, uncertainty, drift, features, baselines, tests, CI) and an **extended README** with methods and literature.
+It ships a **small demo dataset** to keep repo size low, **but** contains the **full codebase** (ensembles, CV, uncertainty, drift, features, baselines, tests, CI) and an **extended README** with methods and literature.
 
 
 ---
