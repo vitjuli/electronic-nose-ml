@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: If you use this repository, please cite it.
+authors:
+  - family-names: Vitiugova
+    given-names: Iuliia
+title: Electronic Nose — Gas Sensor ML (Lite)
+version: 0.1.0
+date-released: 2025-09-17
