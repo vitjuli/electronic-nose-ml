@@ -3,7 +3,6 @@
 This repository implements **machine learning for gas sensor time-series** (SnO₂-based MOS sensors) to predict **dangerous gas concentrations** (Hydrogen, Propane).  
 It ships a **small demo dataset** (lite) to keep repo size low, **but** contains the **full codebase** (ensembles, CV, uncertainty, drift, features, baselines, tests, CI) and an **extended README** with methods and literature.
 
-> Hybrid = *Lite data* + *Full documentation & methods*.
 
 ---
 
@@ -12,10 +11,8 @@ It ships a **small demo dataset** (lite) to keep repo size low, **but** contains
 - **Task:** Multitarget regression → \(f: \mathbb{R}^{T} \to \mathbb{R}^2\) mapping a single temperature-modulated sensor cycle (length \(T\)) to concentrations `[H2_ppm, Propane_ppm]`.
 - **Sensors:** SnO₂-based MOS sensors.
 - **Signals:** resistance traces per cycle (heating/cooling phases).
-- **Demo data (lite):** `data/processed/dataset.csv` with columns:
+- **Demo data:** `data/processed/dataset.csv` with columns:
   - `x0..x255` (256 points), `H2_ppm`, `Propane_ppm`, `group`, `split`.
-
-Replace the CSV with your real processed data keeping same column names. Handcrafted feature builder is available in `src/features.py` and `notebooks/00_build_features.ipynb`.
 
 ---
 
@@ -27,7 +24,6 @@ Replace the CSV with your real processed data keeping same column names. Handcra
 
 ### Validation
 - **Random split** and **Seasonal/Grouped CV**: `GroupKFold` by `group` (e.g., month/day) to avoid temporal leakage.  
-- Scenario “Train on March → Test on April” is recommended to quantify non-stationarity.
 
 ### Ensembling
 - Train **N independent models** (`--n_models 5`) with different seeds and **average** predictions.  
